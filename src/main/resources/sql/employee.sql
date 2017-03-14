@@ -9,13 +9,13 @@ set echo on
 -- drop table
 --
 
-drop table dept cascade constraint;
 drop table emp;
+drop table dept;
 drop table bonus;
 drop table salgrade;
 
 --
--- emp_empno_seq sequence
+--emp_empno_seq sequence
 --
 drop sequence emp_empno_seq;
 create sequence emp_empno_seq start with 8000;

@@ -3,7 +3,6 @@ package com.example.domain;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -17,7 +16,8 @@ public class Emp {
 	private BigDecimal sal;
 	private BigDecimal comm;
 	private Integer deptno;
-
+	
+	//1:1관계
 	private Dept dept;
 	
 	public Dept getDept() {
@@ -42,7 +42,7 @@ public class Emp {
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
-
+		
 		return str;
 	}
 

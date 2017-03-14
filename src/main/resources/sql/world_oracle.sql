@@ -22,17 +22,17 @@ create sequence city_id_seq start with 4080;
  * Country
  */
 create table country (
-	code 			char(3 char),						
-	name 			char(52 char)	not null,						
-	continent		char(20 char),		
-	region			char(26 char),						
-	surface_area	number(10,2),		
-	indep_year		number(6),							
+	code 			char(3 char),
+	name 			char(52 char) not null,	
+	continent		char(20 char),				
+	region			char(26 char),	
+	surface_area	number(10,2), 	
+	indep_year		number(6),
 	population		number(11),			
-	life_expectancy	number(3,1),						
+	life_expectancy	number(3,1),
 	gnp				number(10,2),
 	gnp_old			number(10,2),
-	local_name		char(45 char),						
+	local_name		char(45 char),				
 	government_form	char(45 char),
 	head_of_state	char(60 char),
 	capital			number(11),
@@ -51,7 +51,7 @@ create table city (
 	district		char(20 char),
 	population		number(11),
 	constraint pk_city primary key (id),
-	constraint fk_country foreign key (country_code) references country(code) on delete cascade 
+	constraint fk_country foreign key (country_code) references country(code) on delete cascade
 );
 
 /*
@@ -62,7 +62,7 @@ create table country_language (
 	language		char(30 char),
 	is_official		char(1 char)		default 'F',
 	percentage		number(4,1)			default '0.0',
-	constraint ck_isofficial check (is_official in ('T','F')),
+	constraint ck_is_official check (is_official in ('T','F')),
 	constraint pk_country_language primary key (country_code, language)
 );
 
