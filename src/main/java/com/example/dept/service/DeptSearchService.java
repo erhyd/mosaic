@@ -12,7 +12,7 @@ import com.example.mapper.DeptMapper;
 public class DeptSearchService {
 	
 	@Autowired
-	DeptMapper deptmapper;
+	DeptMapper deptMapper;
 	
 	public List<Dept> getListAll(){
 		return getListAll(false);
@@ -20,9 +20,9 @@ public class DeptSearchService {
 	public List<Dept> getListAll(boolean withEmp){
 		List<Dept> list = null;
 		if(withEmp)
-			list = deptmapper.selectAllWithEmp();
+			list = deptMapper.selectAllWithEmp();
 		else
-			list = deptmapper.selectAll();
+			list = deptMapper.selectAll();
 		return list;
 	}
 }
