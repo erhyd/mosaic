@@ -51,7 +51,7 @@ public class Country {
 
 		return str;
 	}
-	
+
 	public String getCode() {
 		return code;
 	}
@@ -171,5 +171,5 @@ public class Country {
 	public void setCode2(String code2) {
 		this.code2 = code2;
 	}
-
+	
 }

@@ -29,6 +29,7 @@ public class CitySearchController {
 		log.info("getList()");
 		
 		List<City> list = citySearchService.getListAll(true);
+		
 		model.addAttribute("citys", list);
 		
 		return "city/list";

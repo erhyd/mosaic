@@ -58,7 +58,6 @@ public class CitySearchService {
 		return map;
 	}
 	
-	
 	public City getCityById(int id) {
 		log.info("getCityById(" + id + ")");
 		return getCityById(id, false);
